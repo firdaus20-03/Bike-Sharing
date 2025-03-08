@@ -17,7 +17,7 @@ def load_data():
 df = load_data()
 
 # sidebar
-st.sidebar.image('bike.jpg')
+st.sidebar.image('dashboard/bike.jpg')
 st.sidebar.header('Muhammad Firdaus_MC211D5Y2137')
 st.sidebar.title("Analisis Bike Sharing")
 option = st.sidebar.selectbox("Pilih Analisis", ["Pengaruh Hari Libur", "Pola Pengguna Baru vs Lama", "RFM Analysis"])
