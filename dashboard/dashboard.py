@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # load dataset nya
-file_path = "all_data.csv" 
+file_path = "dashboard/all_data.csv" 
 @st.cache_data
 def load_data():
     df = pd.read_csv(file_path)
