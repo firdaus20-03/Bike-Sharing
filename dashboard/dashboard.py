@@ -18,7 +18,7 @@ st.sidebar.image('dashboard/bike.jpg')
 st.sidebar.header('Muhammad Firdaus_MC211D5Y2137')
 st.sidebar.title('Analisis Bike Sharing')
 menu = st.sidebar.selectbox("Pilih Analisis", 
-                            ["1️⃣ Pengaruh Hari Libur", "2️⃣ Pola Penyewaan per Jam", "3️⃣ RFM Analysis"])
+                            ["1️⃣ Pengaruh Hari Libur", "2️⃣ Pola Penyewaan per Jam"])
 
 #Pertanyaan 1. Pengaruh Hari Libur terhadap Jumlah Peminjaman Sepeda
 if menu == "1️⃣ Pengaruh Hari Libur":
