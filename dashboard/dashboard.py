@@ -23,9 +23,10 @@ menu = st.sidebar.selectbox("Pilih Analisis",
 #Pertanyaan 1. Pengaruh Hari Libur terhadap Jumlah Peminjaman Sepeda
 if menu == "1️⃣ Pengaruh Hari Libur":
     st.title("📊 Pengaruh Hari Libur terhadap Penyewaan Sepeda")
-    holiday_avg = df.groupby("holiday")["cnt"].mean().reset_index()
+    df_day = df.drop_duplicates(subset=["dteday"])
+    holiday_avg = df_day.groupby("holiday")["cnt"].mean().reset_index()
 
-    # visualisasi nya
+# Visualisasi
     fig, ax = plt.subplots(figsize=(6, 4))
     sns.barplot(x=holiday_avg['holiday'], y=holiday_avg['cnt'], palette=['#1f77b4', '#ff7f0e'], ax=ax)
     plt.xticks([0, 1], ['Hari Biasa', 'Hari Libur'])
@@ -33,6 +34,7 @@ if menu == "1️⃣ Pengaruh Hari Libur":
     plt.ylabel('Rata-rata Penyewaan Sepeda')
     plt.title('Pengaruh Hari Libur terhadap Penyewaan Sepeda')
     plt.grid(axis='y', linestyle='--', alpha=0.7)
+
     st.pyplot(fig)
 
     # bagian kesimpulan
